@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check eligibility for vote</title>
+</head>
+<body>
+        <label for="">Enter person age to check eligible for vote or not:</label>
+        <input type="number" id="data">
+        <button onclick="check()" type="submit">Check</button>
+        <p id="status"></p>
+    
+    <script>
+        function check(){
+             const person_age = document.getElementById("data").value;
+             if(person_age >= 18)
+             {
+                document.getElementById("status").innerHTML = "You are eligible for vote";
+             }
+             else
+             document.getElementById("status").innerHTML = "Sorry your are not eligible for vote";
+        }
+        
+    </script>
+</body>
+</html>

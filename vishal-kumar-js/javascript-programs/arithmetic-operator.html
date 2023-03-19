@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="firstNumber">
+    <input type="number" id="secondNumber">
+    <label for="op">Enter your choice</label>
+    <select name="" id="op">
+        <option value="1">+</option>
+        <option value="2">-</option>
+        <option value="3">*</option>
+        <option value="4">/</option>
+        <option value="5">%</option>
+    </select>
+
+    <button type="submit" onclick="operation()">Check</button>
+    <h1 id="result">Perform operation</h1>
+    
+  <script>
+    function operation(){
+    let x, y, res, ch
+    
+    ch = document.getElementById("op").value;
+    ch1 = parseInt(ch);
+    if (ch1 > 0 && ch1 < 6) {
+      x = document.getElementById("firstNumber").value;
+      x1=parseInt(x);
+      y = document.getElementById("secondNumber").value;
+      y1=parseInt(y);
+    }
+
+    switch (ch1) {
+      case 1:
+      res = x1+y1;
+      document.getElementById("result").innerHTML = "Result is:" + res;
+      break
+
+      case 2:
+      res = x1 - y1;
+      document.getElementById("result").innerHTML = "Result is:" + res;
+      break
+
+      case 3:
+      res = x1 * y1;
+      document.getElementById("result").innerHTML = "Result is:" + res;
+      break
+
+      case 4:
+      res = x1 / y1;
+      document.getElementById("result").innerHTML = "Result is:" + res;
+      break
+
+      case 5:
+      res = x1 % y1;
+      document.getElementById("result").innerHTML = "Result is:" + res;
+      break
+
+      default:
+      document.getElementById("result").innerHTML = "Result is:" + res;
+    }
+}
+  </script>
+
+</body>
+</html>
+

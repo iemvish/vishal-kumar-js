@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check month name</title>
+</head>
+<body>
+    <label for="data">Enter Month</label>
+    <input type="text" id="data">
+    <button type="submit" onclick="check()">Check</button>
+    <h1 id="month-name"></h1>
+
+    
+    <script>
+        function check(){
+            const monthName = document.getElementById("data").value;
+             const month = parseInt(monthName);
+            switch(month)
+            {
+                case 1 :
+                         document.getElementById("month-name").innerHTML = "January";
+                         break;
+
+                case 2 :
+                    document.getElementById("month-name").innerHTML = "February";
+                    break;
+
+                case 3 :
+                    document.getElementById("month-name").innerHTML = "March";
+                    break;
+
+                 case 4 :
+                    document.getElementById("month-name").innerHTML = "April";
+                    break;
+
+                 case 5 :
+                    document.getElementById("month-name").innerHTML = "May";
+                    break;
+
+                case 6 :
+                    document.getElementById("month-name").innerHTML = "June";
+                    break;
+
+                case 7 :
+                    document.getElementById("month-name").innerHTML = "July";
+                    break;
+
+                case 8 :
+                    document.getElementById("month-name").innerHTML = "August";
+                    break;
+
+                 case 9 :
+                    document.getElementById("month-name").innerHTML = "September";
+                    break;
+
+                case 10 :
+                    document.getElementById("month-name").innerHTML = "October";
+                    break;
+
+                case 11 :
+                    document.getElementById("month-name").innerHTML = "November";
+                    break;
+
+                case 12 :
+                    document.getElementById("month-name").innerHTML = "December";
+                    break;
+
+                default:
+                document.getElementById("month-name").innerHTML = "Please enter validate month number";
+
+
+            }
+    
+        }
+    </script>
+
+</body>
+</html>
